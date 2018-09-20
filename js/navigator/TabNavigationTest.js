@@ -2,36 +2,9 @@ import React from 'react';
 import {Text, View} from 'react-native';
 import {createBottomTabNavigator} from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
-class HomeScreen extends React.Component {
-    render() {
-        return (
-            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                <Text>Home!</Text>
-            </View>
-        );
-    }
-}
-
-class SettingsScreen extends React.Component {
-    render() {
-        return (
-            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                <Text>Settings!</Text>
-            </View>
-        );
-    }
-}
-
-class MyScreen extends React.Component {
-    render() {
-        return (
-            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                <Text>My!</Text>
-            </View>
-        );
-    }
-}
+import HomeScreen from '../screens/HomeScreen'
+import SettingsScreen from '../screens/SettingsScreen'
+import MyScreen from '../screens/MyScreen'
 
 export default createBottomTabNavigator(
     {

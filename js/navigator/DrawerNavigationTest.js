@@ -1,15 +1,13 @@
 import React from 'react';
 import {StyleSheet, View, Image, Button} from 'react-native'
 import {createDrawerNavigator} from "react-navigation";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 class MyHomeScreen extends React.Component {
     static navigationOptions = {
         drawerLabel: 'Home',
         drawerIcon: ({tintColor}) => (
-            <Image
-                source={require('../../res/images/ic_contacts.png')}
-                style={[styles.icon, {tintColor: tintColor}]}
-            />
+             <Ionicons name={'ios-checkbox'} size={25} color={tintColor}/>
         ),
     };
 
@@ -41,10 +39,7 @@ class MyNotificationsScreen extends React.Component {
     static navigationOptions = {
         drawerLabel: 'Notifications',
         drawerIcon: ({tintColor}) => (
-            <Image
-                source={require('../../res/images/ic_code.png')}
-                style={[styles.icon, {tintColor: tintColor}]}
-            />
+            <Ionicons name={'ios-checkmark-circle'} size={25} color={tintColor}/>  //style={[styles.icon, {tintColor: tintColor}]
         ),
     };
 
@@ -65,7 +60,7 @@ const styles = StyleSheet.create({
     },
 });
 
-export default App = createDrawerNavigator({
+export default createDrawerNavigator({
     Home: {
         screen: MyHomeScreen,
     },
