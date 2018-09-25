@@ -10,10 +10,11 @@ import {
 
 type Props = {};
 export default class HomePage extends Component<Props> {
-    static navigationOptions = {
-        title: "Home",
-        headerBackTitle:'返回哈哈'
-    }
+    static navigationOptions = ({ navigation }) => {
+        return {
+            title: 'Home',
+        }
+    };
 
     render() {
         const {navigation} = this.props;
