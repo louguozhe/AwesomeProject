@@ -1,6 +1,8 @@
 // import {AppStackNavigator} from './js/navigator/AppNavigators-56'
 import DrawerNavigationApp from './js/navigator/DrawerNavigationTest'
-import TabNavigationApp from './js/navigator/TabNavigationTest'
-import AuthenticationApp from './js/navigator/AuthenticationTest'
+// import App from './js/navigator/AppTabNavigation'
+import App from './js/pages/AuthNavigation'
+// import App from './js/screens/PopularScreen'
+// import App from './js/screens/FetchScreen'
 
-export default AuthenticationApp;
+export default App;
