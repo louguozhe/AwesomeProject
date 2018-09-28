@@ -1,6 +1,5 @@
 import React from "react";
 import {AsyncStorage, Button, View} from "react-native";
-import TabNavigationApp from "./TabNavigation";
 
 
 export default class AppScreen extends React.Component {

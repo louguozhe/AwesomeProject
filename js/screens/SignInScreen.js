@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, AsyncStorage, View, StyleSheet} from 'react-native';
-import styles from '../screens/styles'
+import styles from './styles'
 
 export default class SignInScreen extends React.Component {
     static navigationOptions = {

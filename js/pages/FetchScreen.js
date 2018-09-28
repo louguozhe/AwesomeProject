@@ -11,7 +11,6 @@ export default class FetchScreen extends Component<props> {
     }
     onLoad(url) {
         console.log('fetch:' + url)
-        fetch(url)
         HttpUtils.get(url)
             .then(result => {
                 this.setState({
@@ -40,7 +39,7 @@ export default class FetchScreen extends Component<props> {
     render() {
         return (
             <View style={{fontSize: 20}}>
-                <Text style={{fontSize: 20}} onPress={ () => {this.onLoad('http://rap2api.taobao.org/app/mock/86002/citylist')}}>
+                <Text style={{fontSize: 20}} onPress={ () => {this.onLoad('https://api.github.com/search/repositories?q=windows')}}>
                     获取数据...
                 </Text>
                 <Text style={{fontSize: 20,paddingTop: 30}} onPress={ () => {

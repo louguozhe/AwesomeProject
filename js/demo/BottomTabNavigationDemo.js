@@ -1,12 +1,7 @@
 import React from 'react';
-import {createBottomTabNavigator} from 'react-navigation';
+import {View, createBottomTabNavigator} from 'react-navigation';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import PopularNavigator from './Popular/PopularNavigator'
-import PopularScreen from './Popular/PopularScreen'
-import CustomTheme from './my/CustomTheme'
-import FetchScreen from './FetchScreen'
-import SettingsScreen from './SettingsScreen'
 
 /**
  * Tab点击跳转调用的公共方法
@@ -19,26 +14,11 @@ const route = (navigation) => {
     }
 };
 
-const TabNavigator =  createBottomTabNavigator(
+const BottomTabNavigatorDemo =  createBottomTabNavigator(
     {
-        Popular: PopularScreen,//PopularNavigator,
-        Settings: {
-            screen: SettingsScreen,
-            navigationOptions:({navigation}) => ({
-                tabBarLabel: '设置1', // tabBar显示的文字
-                tabBarIcon: ({tintColor}) => ( // tabBar显示的图标
-                    // 这里使用了react-native-vector-icons, 不熟悉的请看上方连接
-                    <FontAwesome
-                        name={'wpforms'}
-                        size={20}
-                        color={tintColor}
-                    />
-                ),
-            })
-        },
-        TestAPI: FetchScreen,
+        Popular: View,
         My: {
-            screen: CustomTheme,
+            screen: View,
             navigationOptions:({navigation}) => ({
                 tabBarOnPress: () => { // 使用tabBarOnPress点击事件
                     route(navigation)
@@ -91,7 +71,7 @@ const TabNavigator =  createBottomTabNavigator(
     }
 );
 
-TabNavigator.navigationOptions = ({ navigation }) => {
+BottomTabNavigatorDemo.navigationOptions = ({ navigation }) => {
     const { routeName } = navigation.state.routes[navigation.state.index];
 
     // You can do whatever you like here to pick the title based on the route name
@@ -102,4 +82,4 @@ TabNavigator.navigationOptions = ({ navigation }) => {
     };
 };
 
-export default TabNavigator
+export default BottomTabNavigatorDemo
